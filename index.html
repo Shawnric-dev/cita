@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 • Page not found</title>
-  <!-- Font Awesome for a crisp icon -->
+  <title>404 • hosting expired</title>
+  <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
@@ -15,7 +15,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(145deg, #0b0e1a 0%, #141b2b 100%);
+      background: linear-gradient(145deg, #0e121f 0%, #1a1f30 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,79 +25,79 @@
       overflow-x: hidden;
     }
 
-    /* animated background glow orbs */
+    /* animated background orbs – cool & dreamy */
     body::before,
     body::after {
       content: '';
       position: fixed;
       border-radius: 50%;
       filter: blur(120px);
-      opacity: 0.3;
+      opacity: 0.25;
       z-index: 0;
-      animation: floatOrb 18s ease-in-out infinite alternate;
+      animation: floatOrb 22s ease-in-out infinite alternate;
     }
 
     body::before {
-      width: 40vw;
-      height: 40vw;
-      background: #6c5ce7;
-      top: -10vh;
-      left: -5vw;
-      animation-delay: 0s;
+      width: 45vw;
+      height: 45vw;
+      background: #f97316;
+      top: -12vh;
+      left: -8vw;
+      animation-delay: -2s;
     }
 
     body::after {
-      width: 35vw;
-      height: 35vw;
-      background: #00b4d8;
-      bottom: -8vh;
-      right: -5vw;
-      animation-delay: -6s;
+      width: 40vw;
+      height: 40vw;
+      background: #d946ef;
+      bottom: -10vh;
+      right: -6vw;
+      animation-delay: -8s;
     }
 
     @keyframes floatOrb {
       0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(6vw, 8vh) scale(1.2); }
+      100% { transform: translate(8vw, 10vh) scale(1.3); }
     }
 
-    /* main card – glassmorphism + responsive */
+    /* main glass card */
     .error-card {
       position: relative;
       z-index: 10;
-      max-width: 700px;
+      max-width: 720px;
       width: 100%;
-      background: rgba(18, 26, 40, 0.55);
-      backdrop-filter: blur(14px) saturate(180%);
-      -webkit-backdrop-filter: blur(14px) saturate(180%);
+      background: rgba(16, 22, 40, 0.6);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-radius: 3.5rem;
       padding: 3rem 2.5rem;
       text-align: center;
       box-shadow: 
-        0 30px 50px -20px rgba(0, 0, 0, 0.8),
-        inset 0 1px 2px rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: transform 0.25s ease, box-shadow 0.3s ease;
+        0 30px 60px -20px rgba(0, 0, 0, 0.9),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
     .error-card:hover {
-      transform: scale(1.01);
-      box-shadow: 0 40px 60px -20px #000000cc;
+      transform: scale(1.005);
+      box-shadow: 0 40px 70px -20px #000000cc;
     }
 
-    /* 404 number with gradient & glow */
+    /* 404 number – gradient + glow */
     .error-code {
-      font-size: clamp(6rem, 18vw, 10rem);
+      font-size: clamp(6.5rem, 18vw, 10.5rem);
       font-weight: 800;
       letter-spacing: 0.04em;
       line-height: 1;
-      background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+      background: linear-gradient(135deg, #fb923c, #f97316, #d946ef);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
-      margin-bottom: 0.25rem;
-      position: relative;
+      text-shadow: 0 0 40px rgba(249, 115, 22, 0.25);
+      margin-bottom: 0.2rem;
       display: inline-block;
+      position: relative;
     }
 
     /* subtle underline glow */
@@ -108,59 +108,86 @@
       bottom: -8px;
       width: 80%;
       height: 4px;
-      background: linear-gradient(90deg, transparent, #60a5fa, #a78bfa, transparent);
-      filter: blur(4px);
+      background: linear-gradient(90deg, transparent, #fb923c, #d946ef, transparent);
+      filter: blur(5px);
       border-radius: 4px;
-      opacity: 0.6;
+      opacity: 0.7;
+    }
+
+    /* status badge – hosting expired */
+    .status-badge {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.15);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1.4rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fb923c;
+      border: 1px solid rgba(249, 115, 22, 0.2);
+      letter-spacing: 0.4px;
+      margin-top: 0.2rem;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.05);
+    }
+
+    .status-badge i {
+      margin-right: 8px;
+      font-size: 0.9rem;
+      color: #f97316;
     }
 
     .error-title {
       font-size: clamp(1.6rem, 5vw, 2.6rem);
       font-weight: 600;
       color: #f0f3fa;
-      margin: 1.2rem 0 0.5rem;
+      margin: 1rem 0 0.4rem;
       letter-spacing: -0.02em;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     .error-message {
       font-size: clamp(1rem, 2.2vw, 1.25rem);
       color: #b9c8e6;
-      margin: 0.75rem 0 2rem;
+      margin: 0.6rem 0 1.6rem;
       padding: 0 0.5rem;
       line-height: 1.6;
       font-weight: 400;
       opacity: 0.9;
     }
 
-    /* cool decorative divider */
+    .error-message strong {
+      color: #fb923c;
+      font-weight: 600;
+    }
+
+    /* divider */
     .divider {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      margin: 1.2rem 0 1.8rem;
+      margin: 0.8rem 0 1.8rem;
     }
 
     .divider-line {
       height: 2px;
       flex: 1;
-      max-width: 80px;
-      background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.4), transparent);
+      max-width: 70px;
+      background: linear-gradient(90deg, transparent, rgba(251, 146, 60, 0.3), transparent);
     }
 
     .divider-icon {
-      color: rgba(167, 139, 250, 0.6);
-      font-size: 1.2rem;
+      color: rgba(251, 146, 60, 0.5);
+      font-size: 1rem;
     }
 
-    /* action button – with shine & hover */
-    .btn-home {
+    /* primary CTA – contact provider */
+    .btn-contact {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
-      background: linear-gradient(135deg, #6c5ce7, #4f46e5);
+      background: linear-gradient(135deg, #f97316, #ea580c);
       border: none;
       padding: 0.9rem 2.8rem;
       border-radius: 60px;
@@ -169,37 +196,37 @@
       color: #ffffff;
       text-decoration: none;
       transition: all 0.25s ease;
-      box-shadow: 0 8px 24px -6px #3b2f9e;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 28px -6px #b45309;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       letter-spacing: 0.3px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
     }
 
-    .btn-home i {
-      font-size: 1.2rem;
+    .btn-contact i {
+      font-size: 1.1rem;
       transition: transform 0.2s ease;
     }
 
-    .btn-home:hover {
+    .btn-contact:hover {
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 32px -8px #3b2f9e;
-      background: linear-gradient(135deg, #7c6cf0, #5b52f0);
+      box-shadow: 0 16px 36px -8px #b45309;
+      background: linear-gradient(135deg, #fb923c, #ea580c);
       color: #fff;
     }
 
-    .btn-home:hover i {
+    .btn-contact:hover i {
       transform: translateX(-4px);
     }
 
-    .btn-home:active {
+    .btn-contact:active {
       transform: scale(0.96);
-      box-shadow: 0 4px 12px -2px #2a1f7a;
+      box-shadow: 0 4px 12px -2px #7c3a0a;
     }
 
-    /* tiny shine effect on button */
-    .btn-home::after {
+    /* shine effect */
+    .btn-contact::after {
       content: '';
       position: absolute;
       top: -50%;
@@ -208,29 +235,51 @@
       height: 200%;
       background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent);
       transform: rotate(20deg);
-      transition: all 0.5s ease;
+      transition: all 0.6s ease;
       pointer-events: none;
     }
 
-    .btn-home:hover::after {
+    .btn-contact:hover::after {
       left: 110%;
     }
 
-    /* responsive fine-tuning */
+    /* secondary subtle link – "check status" */
+    .secondary-link {
+      display: inline-block;
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: #8b9bc7;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(139, 155, 199, 0.25);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .secondary-link i {
+      margin-right: 6px;
+      font-size: 0.8rem;
+    }
+
+    .secondary-link:hover {
+      color: #fb923c;
+      border-color: #fb923c;
+    }
+
+    /* responsive */
     @media (max-width: 500px) {
       .error-card {
         padding: 2rem 1.5rem;
         border-radius: 2.5rem;
       }
 
-      .btn-home {
+      .btn-contact {
         padding: 0.75rem 2rem;
         font-size: 1rem;
         gap: 0.6rem;
       }
 
       .divider-line {
-        max-width: 40px;
+        max-width: 35px;
       }
     }
 
@@ -239,129 +288,155 @@
         padding: 1.5rem 1rem;
       }
       .error-code {
-        font-size: 5rem;
+        font-size: 5.2rem;
       }
     }
 
-    /* extra small polish: hide overflow */
-    .error-card * {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* fun floating icon (optional) */
+    /* floating ghost (fun) */
     .ghost-icon {
-      font-size: 2.2rem;
-      color: rgba(167, 139, 250, 0.2);
+      font-size: 2rem;
+      color: rgba(251, 146, 60, 0.12);
       position: absolute;
       bottom: 1rem;
       right: 1.5rem;
       pointer-events: none;
-      animation: floatGhost 6s ease-in-out infinite;
+      animation: floatGhost 7s ease-in-out infinite;
     }
 
     @keyframes floatGhost {
       0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-8px) rotate(4deg); }
+      50% { transform: translateY(-10px) rotate(6deg); }
       100% { transform: translateY(0) rotate(0deg); }
     }
 
-    /* status code in corner – subtle */
-    .status-badge {
+    /* small corner badge (status) */
+    .corner-badge {
       position: absolute;
-      top: 1.2rem;
-      right: 1.8rem;
-      background: rgba(0, 0, 0, 0.25);
+      top: 1rem;
+      right: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
       padding: 0.2rem 1rem;
       border-radius: 40px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 500;
-      color: #8b9bc7;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      letter-spacing: 0.6px;
+      color: #a0b3d9;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      letter-spacing: 0.5px;
       z-index: 20;
       pointer-events: none;
     }
 
-    .status-badge i {
-      margin-right: 6px;
-      color: #6c8cff;
+    .corner-badge i {
+      margin-right: 5px;
+      color: #f97316;
     }
   </style>
 </head>
 <body>
   <div class="error-card" role="main" aria-labelledby="error-title">
-    <!-- subtle status badge -->
-    <div class="status-badge">
-      <i class="fas fa-code"></i> 404 · not found
+    <!-- corner badge -->
+    <div class="corner-badge">
+      <i class="fas fa-exclamation-triangle"></i> hosting expired
     </div>
 
-    <!-- 404 big number -->
+    <!-- 404 -->
     <div class="error-code" aria-hidden="true">404</div>
 
-    <!-- title & message -->
-    <h1 id="error-title" class="error-title">Page lost in space</h1>
+    <!-- status badge (hosting expired) -->
+    <div class="status-badge">
+      <i class="fas fa-clock"></i> hosting package expired
+    </div>
+
+    <h1 id="error-title" class="error-title">Service temporarily offline</h1>
     <p class="error-message">
-      The page you’re looking for doesn’t exist or moved.  
-      Let’s get you back on track.
+      Your <strong>hosting package has expired</strong>.  
+      To restore access, please <strong>contact your service provider</strong> and renew your plan.
     </p>
 
-    <!-- decorative divider -->
+    <!-- divider -->
     <div class="divider">
       <span class="divider-line"></span>
-      <span class="divider-icon"><i class="fas fa-asterisk"></i></span>
+      <span class="divider-icon"><i class="fas fa-circle"></i></span>
       <span class="divider-line"></span>
     </div>
 
-    <!-- return home button -->
-    <a href="#" class="btn-home" id="returnHomeBtn">
-      <i class="fas fa-arrow-left"></i> Return home
+    <!-- primary CTA: contact provider -->
+    <a href="#" class="btn-contact" id="contactBtn">
+      <i class="fas fa-headset"></i> Contact service provider
     </a>
 
-    <!-- tiny ghost for fun (purely decorative) -->
+    <!-- secondary link (optional) -->
+    <a href="#" class="secondary-link" id="checkStatusLink">
+      <i class="fas fa-sync-alt"></i> Check renewal status
+    </a>
+
+    <!-- ghost decoration -->
     <div class="ghost-icon" aria-hidden="true">
-      <i class="fas fa-ghost"></i>
+      <i class="fas fa-cloud"></i>
     </div>
   </div>
 
   <script>
     (function() {
-      // Make the "Return home" button interactive – cool alert + redirect simulation
-      const returnBtn = document.getElementById('returnHomeBtn');
+      // Contact button – interactive demo
+      const contactBtn = document.getElementById('contactBtn');
+      const statusLink = document.getElementById('checkStatusLink');
 
-      if (returnBtn) {
-        returnBtn.addEventListener('click', function(e) {
-          e.preventDefault(); // prevent default anchor behavior
+      if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // simulate "contacting" action
+          const originalHTML = contactBtn.innerHTML;
+          contactBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Connecting…';
+          contactBtn.style.pointerEvents = 'none';
+          contactBtn.style.opacity = '0.8';
 
-          // provide a smooth UX: simulate return with a micro-interaction
-          const originalText = returnBtn.innerHTML;
-          returnBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Taking you home…';
-          returnBtn.style.pointerEvents = 'none';
-          returnBtn.style.opacity = '0.85';
-
-          // after a short delay, show a success toast-like message and reset
           setTimeout(() => {
-            // you could redirect to '/' here, but for demo we show a message
-            returnBtn.innerHTML = '<i class="fas fa-check-circle"></i> Welcome back!';
-            returnBtn.style.background = 'linear-gradient(135deg, #34d399, #10b981)';
-            returnBtn.style.boxShadow = '0 8px 24px -4px #10b981';
+            contactBtn.innerHTML = '<i class="fas fa-check-circle"></i> Request sent!';
+            contactBtn.style.background = 'linear-gradient(135deg, #34d399, #10b981)';
+            contactBtn.style.boxShadow = '0 8px 24px -4px #10b981';
 
-            // reset after 1.8s
+            // reset after 2s
             setTimeout(() => {
-              returnBtn.innerHTML = originalText;
-              returnBtn.style.background = '';
-              returnBtn.style.boxShadow = '';
-              returnBtn.style.pointerEvents = 'auto';
-              returnBtn.style.opacity = '1';
-              // optional: actual redirect would be: window.location.href = '/';
-            }, 1800);
-          }, 900);
+              contactBtn.innerHTML = originalHTML;
+              contactBtn.style.background = '';
+              contactBtn.style.boxShadow = '';
+              contactBtn.style.pointerEvents = 'auto';
+              contactBtn.style.opacity = '1';
+              // in production: window.location.href = 'mailto:support@provider.com';
+            }, 2000);
+          }, 1200);
         });
       }
 
-      // Bonus: tiny console easter egg (for devs)
-      console.log('%c👻 404 page · cool responsive · return code', 'font-size:16px; font-weight:bold; background:#141b2b; color:#a78bfa; padding:6px 12px; border-radius:30px;');
+      // secondary link – "check status" feedback
+      if (statusLink) {
+        statusLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          const originalText = statusLink.innerHTML;
+          statusLink.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Checking…';
+          statusLink.style.pointerEvents = 'none';
+          statusLink.style.opacity = '0.7';
+
+          setTimeout(() => {
+            statusLink.innerHTML = '<i class="fas fa-exclamation-circle"></i> Expired · renew now';
+            statusLink.style.color = '#fb923c';
+            statusLink.style.borderColor = '#fb923c';
+
+            setTimeout(() => {
+              statusLink.innerHTML = originalText;
+              statusLink.style.color = '';
+              statusLink.style.borderColor = '';
+              statusLink.style.pointerEvents = 'auto';
+              statusLink.style.opacity = '1';
+            }, 1800);
+          }, 1000);
+        });
+      }
+
+      // small console easter egg
+      console.log('%c📦 hosting expired · contact provider · 404', 'font-size:14px; font-weight:bold; background:#1a1f30; color:#fb923c; padding:5px 14px; border-radius:30px;');
     })();
   </script>
 </body>
